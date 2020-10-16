@@ -4,25 +4,41 @@
  * and open the template in the editor.
  */
 package controller;
+
 import model.Modelo;
-import view.Vista;
 
 /**
  *
  * @author andresforero
  */
+
 public class Controlador {
     
-    Modelo modelo = new Modelo();
-    
-    Vista vista = new Vista();
-    
-    public String modeloAVista(){
-        return modelo.traductor(vistaAModelo());
+    public String opcion;
+
+    public Controlador(String opcion) {
+        
+        this.setOpcion(opcion);
+    }
+
+    public Controlador() {
+        
     }
     
-    public String vistaAModelo(){
-        return vista.opciones();
+    public String modeloAVista(){
+        
+        Modelo modelo = new Modelo();
+        
+        return modelo.traductor(getOpcion());
+        
+    }
+    
+    public String getOpcion() {
+        return opcion;
+    }
+
+    public void setOpcion(String opcion) {
+        this.opcion = opcion;
     }
     
 }

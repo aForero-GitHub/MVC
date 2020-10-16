@@ -20,7 +20,7 @@ public class Vista extends javax.swing.JFrame {
         initComponents();
     }
     
-    Controlador control = new Controlador();
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -96,8 +96,12 @@ public class Vista extends javax.swing.JFrame {
 
     private void traducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_traducirActionPerformed
         // TODO add your handling code here:
-        
-        resultado.setText(control.modeloAVista());
+        Controlador control = new Controlador();
+      
+          resultado.setText(control.modeloAVista());
+          
+          control.setOpcion(opcion.getSelectedItem().toString());
+          
     }//GEN-LAST:event_traducirActionPerformed
 
     /**
@@ -135,11 +139,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
     }
-    
-    public String opciones(){
-        return opcion.getSelectedItem().toString();
-    }
-
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

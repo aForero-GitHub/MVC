@@ -5,14 +5,22 @@
  */
 package model;
 
+import controller.Controlador;
+
 /**
  *
  * @author andresforero
  */
 public class Modelo {
 
+    
+    
     public String traductor(String number) {
-
+    
+        Controlador control = new Controlador();
+        
+        number = control.getOpcion();
+        
         switch (number) {
             case "0":
                 return "Cero";
