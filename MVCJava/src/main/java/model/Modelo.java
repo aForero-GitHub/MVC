@@ -1,25 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
-
-import controller.Controlador;
-
 /**
- *
- * @author andresforero
+ * Logica del traductor.
+ * recibe la opcion seleccionada en la vista y retorna el valor correcto
+ * @author Andres Forero
+ * @version: 1.0.0
+ * @since 16/10/2020
  */
 public class Modelo {
 
     
     
     public String traductor(String number) {
-    
-        Controlador control = new Controlador();
-        
-        number = control.getOpcion();
         
         switch (number) {
             case "0":

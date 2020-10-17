@@ -1,44 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import model.Modelo;
 
 /**
- *
- * @author andresforero
+ * Clase intermediaria entre la vista y el modelo
+ * @author Andres Forero
+ * @version: 1.0.0
+ * @since 16/10/2020
  */
 
 public class Controlador {
     
     public String opcion;
-
-    public Controlador(String opcion) {
-        
-        this.setOpcion(opcion);
-    }
-
-    public Controlador() {
-        
-    }
     
-    public String modeloAVista(){
+    public String modeloAVista(String opcion){
         
         Modelo modelo = new Modelo();
         
-        return modelo.traductor(getOpcion());
+        return modelo.traductor(opcion);
         
     }
-    
-    public String getOpcion() {
-        return opcion;
-    }
-
-    public void setOpcion(String opcion) {
-        this.opcion = opcion;
-    }
-    
+      
 }

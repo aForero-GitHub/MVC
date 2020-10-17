@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import controller.Controlador;
 
 /**
- *
- * @author andresforero
+ * Clase de inico (VISTA)
+ * @author Andres Forero
+ * @version: 1.0.0
+ * @since 16/10/2020
  */
 public class Vista extends javax.swing.JFrame {
 
@@ -32,7 +29,7 @@ public class Vista extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        opcion = new javax.swing.JComboBox();
+        opcionq = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
         resultado = new javax.swing.JLabel();
         traducir = new javax.swing.JButton();
@@ -41,7 +38,7 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel1.setText("VISTA");
 
-        opcion.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        opcionq.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
 
         jLabel2.setText("ES");
 
@@ -60,7 +57,7 @@ public class Vista extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(opcion, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(opcionq, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(77, 77, 77)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
@@ -83,7 +80,7 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(opcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(opcionq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(resultado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
@@ -97,10 +94,8 @@ public class Vista extends javax.swing.JFrame {
     private void traducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_traducirActionPerformed
         // TODO add your handling code here:
         Controlador control = new Controlador();
-      
-          resultado.setText(control.modeloAVista());
           
-          control.setOpcion(opcion.getSelectedItem().toString());
+          resultado.setText(control.modeloAVista(opcionq.getSelectedItem().toString()));
           
     }//GEN-LAST:event_traducirActionPerformed
 
@@ -143,7 +138,7 @@ public class Vista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JComboBox opcion;
+    private javax.swing.JComboBox opcionq;
     private javax.swing.JLabel resultado;
     private javax.swing.JButton traducir;
     // End of variables declaration//GEN-END:variables
